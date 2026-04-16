@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | Vcaptiona</title>
+    <meta name="description" content="Lost in the timeline? The page you're looking for has moved or never existed.">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://code.iconify.design">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        oswald: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #f97316 0%, #fbbf24 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to bottom right, #fb923c, #ea580c);
+            box-shadow: 0 0 50px -12px #f97316;
+            transition: all 300ms ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 70px -12px #f97316;
+        }
+
+        .anim-in {
+            animation: animationIn 0.8s ease-out both;
+        }
+
+        @keyframes animationIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+                filter: blur(8px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0px);
+            }
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 20vw, 15rem);
+            line-height: 0.8;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            font-family: 'Oswald', sans-serif;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(249, 115, 22, 0.3);
+            position: relative;
+        }
+
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #f97316;
+            opacity: 0.1;
+            filter: blur(20px);
+            z-index: -1;
+        }
+
+        .glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="glow"></div>
+
+    <main class="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2.5 mb-12 anim-in" style="animation-delay: 100ms;">
+            <div
+                class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/20">
+                <iconify-icon icon="mdi:subtitles-outline" width="22" class="text-white"></iconify-icon>
+            </div>
+            <span class="font-oswald font-semibold text-xl tracking-wide">V<span
+                    class="text-orange-400">captiona</span></span>
+        </a>
+
+        <!-- 404 Heading -->
+        <div class="error-code anim-in" style="animation-delay: 200ms;">404</div>
+
+        <!-- Message -->
+        <h1 class="text-3xl md:text-4xl font-oswald font-medium uppercase mt-8 mb-4 anim-in"
+            style="animation-delay: 300ms;">
+            Lost in the <span class="gradient-text">Timeline</span>?
+        </h1>
+        <p class="max-w-md mx-auto text-neutral-400 leading-relaxed mb-10 anim-in" style="animation-delay: 400ms;">
+            The page you're looking for has been trimmed out or never made it to the final export. Let's get you back to
+            creating.
+        </p>
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4 anim-in" style="animation-delay: 500ms;">
+            <a href="/" class="btn-primary px-8 py-3.5 rounded-xl font-semibold text-white flex items-center gap-2">
+                <iconify-icon icon="mdi:home-variant-outline" width="20"></iconify-icon>
+                Return Home
+            </a>
+            <a href="javascript:history.back()"
+                class="px-8 py-3.5 rounded-xl font-semibold text-white border border-white/10 hover:bg-white/5 transition-colors flex items-center gap-2">
+                <iconify-icon icon="mdi:arrow-left" width="20"></iconify-icon>
+                Go Back
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Particle Background Logic
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouseX = 0;
+        let mouseY = 0;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = (Math.random() - 0.5) * 0.3;
+                this.opacity = Math.random() * 0.4 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                const dx = mouseX - this.x;
+                const dy = mouseY - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 180) {
+                    const force = (180 - dist) / 180;
+                    this.x -= dx * force * 0.01;
+                    this.y -= dy * force * 0.01;
+                    this.opacity = Math.min(0.8, this.opacity + 0.02);
+                } else {
+                    this.opacity += (0.2 - this.opacity) * 0.01;
+                }
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(249, 115, 22, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 80; i++) particles.push(new Particle());
+
+        function drawLines() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(249, 115, 22, ${0.06 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawLines();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+
+</html>

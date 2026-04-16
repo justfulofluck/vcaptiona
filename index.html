@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Vcaptiona — AI Alpha Caption Overlay Generator for Video Editors | Transparent WebM Export</title>
+    <meta name="description"
+        content="Vcaptiona.com is an AI-powered tool that creates transparent alpha caption overlays for Premiere Pro, After Effects & CapCut. Auto-transcribe audio with Gemini AI, style with 100+ fonts & motion effects, export as transparent WebM. No green screen needed.">
+    <meta name="keywords"
+        content="alpha caption overlay, transparent caption video, AI caption generator, auto subtitle generator, caption overlay Premiere Pro, transparent WebM captions, alpha channel subtitles, video caption software, AI transcription captions, motion caption effects, CapCut captions, After Effects text overlay, SRT to video, automatic caption maker">
+    <meta name="author" content="Vcaptiona">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://vcaptiona.com/">
+
+    <!-- Hreflang for Global SEO -->
+    <link rel="alternate" hreflang="en" href="https://vcaptiona.com/">
+    <link rel="alternate" hreflang="x-default" href="https://vcaptiona.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vcaptiona.com/">
+    <meta property="og:title" content="Vcaptiona — AI Alpha Caption Overlay Generator for Video Editors">
+    <meta property="og:description"
+        content="Create transparent caption overlays with AI transcription, 100+ fonts, pro motion effects, and one-click transparent WebM export. Drop directly into Premiere Pro, After Effects, or CapCut.">
+    <meta property="og:image" content="https://vcaptiona.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Vcaptiona">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://vcaptiona.com/">
+    <meta name="twitter:title" content="Vcaptiona — AI Alpha Caption Overlay Generator">
+    <meta name="twitter:description"
+        content="Auto-transcribe audio, style captions with 100+ fonts & effects, export transparent WebM overlays for any video editor.">
+    <meta name="twitter:image" content="https://vcaptiona.com/og-image.png">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://code.iconify.design">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        oswald: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Structured Data: WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Vcaptiona",
+        "url": "https://vcaptiona.com",
+        "description": "AI-powered alpha caption overlay generator. Auto-transcribe audio, style with 100+ fonts and motion effects, export as transparent WebM for Premiere Pro, After Effects, and CapCut.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free during early access"
+        },
+        "browserRequirements": "Requires a modern web browser with WebM/Canvas support",
+        "featureList": [
+            "AI-powered audio transcription with Gemini 1.5 Flash",
+            "100+ premium Google Fonts",
+            "8 professional motion text effects",
+            "Transparent WebM export with alpha channel",
+            "Precision timeline editor with drag-and-drop",
+            "1080p canvas preview",
+            "Waveform visualization with wavesurfer.js",
+            "Full undo/redo history system"
+        ],
+        "screenshot": "https://vcaptiona.com/screenshot.png",
+        "softwareVersion": "1.0"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Vcaptiona",
+        "url": "https://vcaptiona.com",
+        "logo": "https://vcaptiona.com/logo.png",
+        "sameAs": [
+            "https://twitter.com/vcaptiona",
+            "https://github.com/vcaptiona",
+            "https://discord.gg/vcaptiona"
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an alpha caption overlay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An alpha caption overlay is a video file with a transparent background (alpha channel) containing animated text captions. It can be placed directly on top of your video footage in editors like Premiere Pro, After Effects, or CapCut without needing green screen removal or masking."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Vcaptiona work with Adobe Premiere Pro?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Vcaptiona exports transparent WebM files with a built-in alpha channel that can be imported directly into Adobe Premiere Pro, After Effects, CapCut, DaVinci Resolve, and any editor that supports WebM with transparency."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the AI transcription work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vcaptiona uses Google's Gemini 1.5 Flash model to automatically transcribe your uploaded audio files. It generates word-level and phrase-level timestamps, significantly reducing the manual work of timing your captions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need a green screen for transparent captions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Vcaptiona renders captions on a transparent canvas and exports them as WebM files with a native alpha channel. There is no green screen, no chroma keying, and no masking required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Vcaptiona free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vcaptiona is currently free during early access. No credit card is required to get started."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #090A0B;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(249, 115, 22, 0.4);
+            border-radius: 3px;
+        }
+
+        @keyframes animationIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+                filter: blur(8px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0px);
+            }
+        }
+
+        @keyframes slideDownClip {
+            0% {
+                transform: translateY(-105%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes border-beam {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        @keyframes float-slow {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes float-medium {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(249, 115, 22, 0.4);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        @keyframes waveform {
+
+            0%,
+            100% {
+                height: 20%;
+            }
+
+            50% {
+                height: 80%;
+            }
+        }
+
+        @keyframes typewriter-cursor {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes overshoot-in {
+            0% {
+                transform: translateY(40px) scale(0.8);
+                opacity: 0;
+            }
+
+            60% {
+                transform: translateY(-8px) scale(1.05);
+                opacity: 1;
+            }
+
+            80% {
+                transform: translateY(4px) scale(0.98);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes decode-flicker {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 0.2;
+            }
+
+            20% {
+                opacity: 0.9;
+            }
+
+            30% {
+                opacity: 0.4;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.1;
+            }
+
+            60% {
+                opacity: 0.8;
+            }
+
+            70% {
+                opacity: 0.3;
+            }
+
+            80% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(-3px) rotate(-1deg);
+            }
+
+            75% {
+                transform: translateX(3px) rotate(1deg);
+            }
+        }
+
+        @keyframes turbulent {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            20% {
+                transform: translate(2px, -2px) rotate(0.5deg);
+            }
+
+            40% {
+                transform: translate(-1px, 3px) rotate(-0.5deg);
+            }
+
+            60% {
+                transform: translate(3px, 1px) rotate(0.3deg);
+            }
+
+            80% {
+                transform: translate(-2px, -1px) rotate(-0.3deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        .anim-in {
+            animation: animationIn 0.8s ease-out both;
+        }
+
+        .anim-in.d1 {
+            animation-delay: 0.1s;
+        }
+
+        .anim-in.d2 {
+            animation-delay: 0.2s;
+        }
+
+        .anim-in.d3 {
+            animation-delay: 0.3s;
+        }
+
+        .anim-in.d4 {
+            animation-delay: 0.4s;
+        }
+
+        .anim-in.d5 {
+            animation-delay: 0.5s;
+        }
+
+        .anim-in.d6 {
+            animation-delay: 0.6s;
+        }
+
+        .anim-in.d7 {
+            animation-delay: 0.7s;
+        }
+
+        .scroll-hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            filter: blur(6px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scroll-visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
+        }
+
+        .hero-letter {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .hero-letter span {
+            display: inline-block;
+            animation: slideDownClip 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #f97316 0%, #fbbf24 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to bottom right, #fb923c, #ea580c);
+            box-shadow: 0 0 50px -12px #f97316;
+            transition: all 300ms ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 70px -12px #f97316;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            transition: all 300ms ease;
+        }
+
+        .btn-outline:hover {
+            border-color: rgba(249, 115, 22, 0.5);
+            background: rgba(249, 115, 22, 0.05);
+            transform: scale(1.03);
+        }
+
+        .btn-outline:active {
+            transform: scale(0.98);
+        }
+
+        .feature-card {
+            background: #090A0B;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0), transparent);
+            transition: all 400ms ease;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(249, 115, 22, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-card:hover::before {
+            background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.6), transparent);
+        }
+
+        .timeline-block {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(249, 115, 22, 0.05));
+            border: 1px solid rgba(249, 115, 22, 0.25);
+            border-radius: 4px;
+            transition: all 200ms ease;
+            cursor: grab;
+        }
+
+        .timeline-block:hover {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.25), rgba(249, 115, 22, 0.1));
+            border-color: rgba(249, 115, 22, 0.5);
+        }
+
+        .wave-bar {
+            width: 3px;
+            background: linear-gradient(to top, #f97316, #fbbf24);
+            border-radius: 2px;
+            animation: waveform 1.2s ease-in-out infinite;
+        }
+
+        .effect-overshoot {
+            animation: overshoot-in 1.2s ease-out both;
+        }
+
+        .effect-decode {
+            animation: decode-flicker 2s linear infinite;
+        }
+
+        .effect-wiggle {
+            animation: wiggle 0.3s ease-in-out infinite;
+        }
+
+        .effect-turbulent {
+            animation: turbulent 0.4s ease-in-out infinite;
+        }
+
+        .border-beam-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .border-beam-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, rgba(249, 115, 22, 0.6), transparent);
+            animation: border-beam 5s linear infinite;
+            transform: translateX(-50%);
+        }
+
+        .nav-glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .step-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 120px;
+            font-weight: 700;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(249, 115, 22, 0.2);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            user-select: none;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+        }
+
+        .float-badge {
+            animation: float-slow 4s ease-in-out infinite;
+        }
+
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+        }
+
+        .check-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(249, 115, 22, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #131416;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            border-radius: 8px;
+            padding: 14px 22px;
+            z-index: 9999;
+            transform: translateY(120%);
+            opacity: 0;
+            transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 400ms ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 400ms ease, padding 300ms ease;
+            padding: 0 0;
+        }
+
+        .faq-answer.open {
+            max-height: 200px;
+            padding: 0 0 16px 0;
+        }
+
+        .faq-chevron {
+            transition: transform 300ms ease;
+        }
+
+        .faq-chevron.open {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="font-inter">
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[999] focus:px-4 focus:py-2 focus:bg-orange-500 focus:text-white focus:rounded-lg focus:text-sm">Skip
+        to main content</a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 pt-4" role="navigation" aria-label="Main navigation">
+        <div class="max-w-6xl mx-auto nav-glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 group" aria-label="Vcaptiona — Home">
+                <div
+                    class="w-9 h-9 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:shadow-orange-500/40 transition-shadow">
+                    <iconify-icon icon="mdi:subtitles-outline" width="20" class="text-white"
+                        aria-hidden="true"></iconify-icon>
+                </div>
+                <span class="font-oswald font-semibold text-lg tracking-wide">V<span
+                        class="text-orange-400">captiona</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-sm text-slate-300 hover:text-white transition-colors">Features</a>
+                <a href="#how-it-works" class="text-sm text-slate-300 hover:text-white transition-colors">How It
+                    Works</a>
+                <a href="#effects" class="text-sm text-slate-300 hover:text-white transition-colors">Effects</a>
+                <a href="#faq" class="text-sm text-slate-300 hover:text-white transition-colors">FAQ</a>
+            </div>
+            <div class="hidden md:flex items-center gap-3">
+                <a href="#waitlist" class="btn-outline px-5 py-2.5 rounded-lg text-sm font-medium text-white">Sign
+                    In</a>
+                <a href="#waitlist" class="btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold text-white">Get
+                    Started Free</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-white p-1" aria-label="Toggle menu" aria-expanded="false">
+                <iconify-icon icon="mdi:menu" width="26" aria-hidden="true"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden max-w-6xl mx-auto nav-glass rounded-b-2xl px-6" role="menu">
+            <div class="py-4 flex flex-col gap-4">
+                <a href="#features" class="text-sm text-slate-300 hover:text-white transition-colors py-2"
+                    role="menuitem">Features</a>
+                <a href="#how-it-works" class="text-sm text-slate-300 hover:text-white transition-colors py-2"
+                    role="menuitem">How It Works</a>
+                <a href="#effects" class="text-sm text-slate-300 hover:text-white transition-colors py-2"
+                    role="menuitem">Effects</a>
+                <a href="#faq" class="text-sm text-slate-300 hover:text-white transition-colors py-2"
+                    role="menuitem">FAQ</a>
+                <div class="flex gap-3 pt-2 pb-2">
+                    <a href="#waitlist"
+                        class="btn-outline flex-1 px-4 py-2.5 rounded-lg text-sm font-medium text-white text-center">Sign
+                        In</a>
+                    <a href="#waitlist"
+                        class="btn-primary flex-1 px-4 py-2.5 rounded-lg text-sm font-semibold text-white text-center">Get
+                        Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <header class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 pt-28 pb-20 overflow-hidden">
+            <div class="absolute inset-0 z-0"
+                style="background: radial-gradient(800px 400px at 50% 40%, rgba(249,115,22,0.1), transparent 70%);"
+                aria-hidden="true"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"
+                aria-hidden="true"></div>
+
+            <div class="relative z-10 max-w-6xl mx-auto text-center">
+                <!-- Badge -->
+                <div
+                    class="anim-in d1 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] mb-8">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse" aria-hidden="true"></span>
+                    <span class="text-xs font-medium text-slate-300 tracking-wide">Powered by Gemini 1.5 Flash AI</span>
+                </div>
+
+                <!-- H1 — Primary Keyword Focus -->
+                <h1
+                    class="anim-in d2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-oswald font-medium leading-[0.85] tracking-[-0.04em] uppercase mb-6">
+                    <span class="hero-letter"><span style="animation-delay:400ms">A</span></span><span
+                        class="hero-letter"><span style="animation-delay:500ms">l</span></span><span
+                        class="hero-letter"><span style="animation-delay:600ms">p</span></span><span
+                        class="hero-letter"><span style="animation-delay:700ms">h</span></span><span
+                        class="hero-letter"><span style="animation-delay:800ms">a</span></span><span
+                        class="hero-letter"><span style="animation-delay:850ms"> </span></span><span
+                        class="hero-letter"><span style="animation-delay:900ms">C</span></span><span
+                        class="hero-letter"><span style="animation-delay:1000ms">a</span></span><span
+                        class="hero-letter"><span style="animation-delay:1100ms">p</span></span><span
+                        class="hero-letter"><span style="animation-delay:1200ms">t</span></span><span
+                        class="hero-letter"><span style="animation-delay:1300ms">i</span></span><span
+                        class="hero-letter"><span style="animation-delay:1400ms">o</span></span><span
+                        class="hero-letter"><span style="animation-delay:1500ms">n</span></span><span
+                        class="hero-letter"><span style="animation-delay:1600ms">s</span></span><br>
+                    <span class="gradient-text hero-letter"><span style="animation-delay:1800ms">M</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:1900ms">a</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2000ms">d</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2100ms">e</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2150ms"> </span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2200ms">S</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2300ms">i</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2400ms">m</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2500ms">p</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2600ms">l</span></span><span
+                        class="gradient-text hero-letter"><span style="animation-delay:2700ms">e</span></span>
+                </h1>
+
+                <!-- Subtitle — Secondary Keywords -->
+                <p class="anim-in d4 max-w-2xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed mb-10">
+                    Upload audio, let AI auto-transcribe it, style captions with <strong
+                        class="text-white font-medium">100+ premium fonts</strong> and <strong
+                        class="text-white font-medium">pro motion effects</strong>, then export as a <strong
+                        class="text-orange-400 font-medium">transparent overlay</strong> — ready for Premiere Pro, After
+                    Effects, or CapCut. No green screen required.
+                </p>
+
+                <!-- CTA -->
+                <div class="anim-in d5 flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <a href="#waitlist"
+                        class="btn-primary px-8 py-3.5 rounded-xl text-sm font-semibold text-white flex items-center gap-2.5 w-full sm:w-auto justify-center">
+                        <iconify-icon icon="mdi:rocket-launch-outline" width="18" aria-hidden="true"></iconify-icon>
+                        Create Alpha Captions Free
+                    </a>
+                    <a href="#how-it-works"
+                        class="btn-outline px-8 py-3.5 rounded-xl text-sm font-medium text-white flex items-center gap-2.5 w-full sm:w-auto justify-center">
+                        <iconify-icon icon="mdi:play-circle-outline" width="18" aria-hidden="true"></iconify-icon>
+                        See How It Works
+                    </a>
+                </div>
+
+                <!-- Hero Visual: App Preview -->
+                <div class="anim-in d6 relative max-w-4xl mx-auto border-beam-container rounded-2xl overflow-hidden"
+                    style="border: 1px solid rgba(255,255,255,0.08);" role="img"
+                    aria-label="Vcaptiona app interface showing caption editor with timeline, waveform, and 1080p preview canvas">
+                    <div class="flex items-center gap-2 px-4 py-3 bg-[#090A0B] border-b border-white/[0.06]">
+                        <div class="w-3 h-3 rounded-full bg-red-500/70" aria-hidden="true"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/70" aria-hidden="true"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/70" aria-hidden="true"></div>
+                        <span class="text-[10px] text-neutral-500 ml-3 font-mono">Vcaptiona — Alpha Caption
+                            Editor</span>
+                    </div>
+                    <div class="bg-[#0B0C0E] p-4 sm:p-6">
+                        <div class="flex items-center gap-3 mb-4 flex-wrap">
+                            <div
+                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
+                                <iconify-icon icon="mdi:format-font" width="14" class="text-orange-400"
+                                    aria-hidden="true"></iconify-icon>
+                                <span>Oswald Bold</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
+                                <span class="w-3 h-3 rounded-full bg-white border border-white/20"
+                                    aria-hidden="true"></span>
+                                <span>#FFFFFF</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
+                                <iconify-icon icon="mdi:format-size" width="14" class="text-orange-400"
+                                    aria-hidden="true"></iconify-icon>
+                                <span>72px</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-orange-500/10 border border-orange-500/20 text-xs text-orange-400 ml-auto">
+                                <iconify-icon icon="mdi:lightning-bolt" width="14" aria-hidden="true"></iconify-icon>
+                                <span>Overshoot</span>
+                            </div>
+                        </div>
+                        <div class="relative aspect-video bg-[#131416] rounded-lg overflow-hidden flex items-end justify-center pb-8 mb-4"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <div class="absolute inset-0 opacity-[0.03]"
+                                style="background-image: linear-gradient(45deg, #fff 25%, transparent 25%), linear-gradient(-45deg, #fff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #fff 75%), linear-gradient(-45deg, transparent 75%, #fff 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;"
+                                aria-hidden="true"></div>
+                            <span class="effect-overshoot font-oswald text-2xl sm:text-4xl font-bold text-white"
+                                style="text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,0.9), 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">This
+                                is your caption</span>
+                            <div
+                                class="absolute top-3 right-3 px-2 py-0.5 rounded bg-white/[0.06] text-[10px] text-neutral-500 font-mono">
+                                1080p</div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-end gap-[2px] h-8 px-1 opacity-60" id="heroWaveform"
+                                aria-hidden="true"></div>
+                            <div class="relative bg-white/[0.02] rounded-md p-2 space-y-1.5"
+                                style="border: 1px solid rgba(255,255,255,0.04);">
+                                <div class="flex items-center gap-[3px]">
+                                    <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
+                                        style="width: 28%;">This is your</div>
+                                    <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
+                                        style="width: 22%; opacity: 0.7;">caption</div>
+                                    <div class="flex-1"></div>
+                                </div>
+                                <div class="flex items-center gap-[3px]">
+                                    <div class="flex-1"></div>
+                                    <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
+                                        style="width: 35%; opacity: 0.5;">with alpha channel</div>
+                                </div>
+                                <div class="absolute top-0 bottom-0 left-[30%] w-[2px] bg-orange-500 z-10"
+                                    style="box-shadow: 0 0 8px rgba(249,115,22,0.5);" aria-hidden="true">
+                                    <div class="w-3 h-3 bg-orange-500 rounded-full -ml-[5px] -mt-1"
+                                        style="box-shadow: 0 0 10px rgba(249,115,22,0.6);"></div>
+                                </div>
+                                <div class="flex justify-between px-1 pt-1" aria-hidden="true">
+                                    <span class="text-[9px] text-neutral-600 font-mono">00:00</span>
+                                    <span class="text-[9px] text-neutral-600 font-mono">00:05</span>
+                                    <span class="text-[9px] text-neutral-600 font-mono">00:10</span>
+                                    <span class="text-[9px] text-neutral-600 font-mono">00:15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compatible Editors -->
+                <div class="anim-in d7 mt-12 flex flex-col items-center gap-3">
+                    <span class="text-[11px] text-neutral-600 uppercase tracking-[0.15em]">Compatible with</span>
+                    <div class="flex items-center gap-8 sm:gap-12 opacity-40">
+                        <span class="font-oswald text-lg tracking-wide">Premiere Pro</span>
+                        <span class="font-oswald text-lg tracking-wide">After Effects</span>
+                        <span class="font-oswald text-lg tracking-wide">CapCut</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Bar -->
+        <section class="relative z-10 px-4 sm:px-6" aria-label="Key metrics">
+            <div class="max-w-5xl mx-auto section-divider" aria-hidden="true"></div>
+            <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 py-12">
+                <div class="text-center scroll-anim">
+                    <div class="font-oswald text-3xl sm:text-4xl font-semibold text-orange-400">100+</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Premium Fonts</div>
+                </div>
+                <div class="text-center scroll-anim">
+                    <div class="font-oswald text-3xl sm:text-4xl font-semibold text-orange-400">8</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Motion Effects</div>
+                </div>
+                <div class="text-center scroll-anim">
+                    <div class="font-oswald text-3xl sm:text-4xl font-semibold text-orange-400">&alpha;</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Transparent Export</div>
+                </div>
+                <div class="text-center scroll-anim">
+                    <div class="font-oswald text-3xl sm:text-4xl font-semibold text-orange-400">0s</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Green Screen Needed</div>
+                </div>
+            </div>
+            <div class="max-w-5xl mx-auto section-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="relative z-10 px-4 sm:px-6 py-20 sm:py-28" aria-labelledby="features-heading">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 scroll-anim">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] mb-5"
+                        aria-hidden="true">
+                        <iconify-icon icon="mdi:star-four-points" width="14" class="text-orange-400"></iconify-icon>
+                        <span class="text-[11px] font-medium text-neutral-400 tracking-wide uppercase">Core
+                            Features</span>
+                    </div>
+                    <h2 id="features-heading"
+                        class="font-oswald text-3xl sm:text-4xl md:text-5xl font-medium tracking-[-0.03em] uppercase mb-4">
+                        AI Caption Generator<br><span class="gradient-text">Built for Pro Editors</span>
+                    </h2>
+                    <p class="max-w-xl mx-auto text-sm sm:text-base text-neutral-400 leading-relaxed">
+                        A focused toolkit for one purpose: creating transparent caption overlays faster than any manual
+                        workflow.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="w-11 h-11 rounded-lg bg-orange-500/10 flex items-center justify-center mb-5"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:brain" width="22" class="text-orange-400"></iconify-icon>
+                        </div>
+                        <h3 class="font-oswald text-lg font-medium uppercase tracking-wide mb-2">AI Audio Transcription
+                        </h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Gemini 1.5 Flash generates word-level and
+                            phrase-level caption timings automatically. Upload audio, get precise SRT captions in
+                            seconds.</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="w-11 h-11 rounded-lg bg-orange-500/10 flex items-center justify-center mb-5"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:timeline-clock-outline" width="22"
+                                class="text-orange-400"></iconify-icon>
+                        </div>
+                        <h3 class="font-oswald text-lg font-medium uppercase tracking-wide mb-2">Precision Timeline
+                            Editor</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Full-width interactive caption timeline with
+                            drag-and-drop repositioning and edge-resizing for frame-accurate subtitle control.</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="w-11 h-11 rounded-lg bg-orange-500/10 flex items-center justify-center mb-5"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:monitor-screenshot" width="22"
+                                class="text-orange-400"></iconify-icon>
+                        </div>
+                        <h3 class="font-oswald text-lg font-medium uppercase tracking-wide mb-2">1080p Canvas Preview
+                        </h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">See exactly how your transparent captions
+                            look on a real HD stage with real-time preview and waveform-synced playback.</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="w-11 h-11 rounded-lg bg-orange-500/10 flex items-center justify-center mb-5"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:format-text" width="22" class="text-orange-400"></iconify-icon>
+                        </div>
+                        <h3 class="font-oswald text-lg font-medium uppercase tracking-wide mb-2">100+ Premium Fonts</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Curated Google Fonts library — clean
+                            sans-serifs, elegant scripts, technical mono. The right typeface for every video style and
+                            brand.</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="w-11 h-11 rounded-lg bg-orange-500/10 flex items-center justify-center mb-5"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:tune-variant" width="22" class="text-orange-400"></iconify-icon>
+                        </div>
+                        <h3 class="font-oswald text-lg font-medium uppercase tracking-wide mb-2">Deep Text Customization
+                        </h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Font size, text color, stroke color &amp;
+                            width, vertical position, alignment, drop shadows — complete caption styling control.</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="w-11 h-11 rounded-lg bg-orange-500/10 flex items-center justify-center mb-5"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:export-variant" width="22" class="text-orange-400"></iconify-icon>
+                        </div>
+                        <h3 class="font-oswald text-lg font-medium uppercase tracking-wide mb-2">Transparent WebM Export
+                        </h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">Export caption overlays as WebM with a
+                            native alpha channel. Drop directly into your video editor — no green screen, no masking
+                            needed.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="relative z-10 px-4 sm:px-6 py-20 sm:py-28" aria-labelledby="how-heading">
+            <div class="absolute inset-0"
+                style="background: radial-gradient(600px 300px at 30% 50%, rgba(249,115,22,0.06), transparent 70%);"
+                aria-hidden="true"></div>
+            <div class="max-w-6xl mx-auto relative">
+                <div class="text-center mb-16 scroll-anim">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] mb-5"
+                        aria-hidden="true">
+                        <iconify-icon icon="mdi:lightning-bolt" width="14" class="text-orange-400"></iconify-icon>
+                        <span class="text-[11px] font-medium text-neutral-400 tracking-wide uppercase">How It
+                            Works</span>
+                    </div>
+                    <h2 id="how-heading"
+                        class="font-oswald text-3xl sm:text-4xl md:text-5xl font-medium tracking-[-0.03em] uppercase mb-4">
+                        Three Steps to<br><span class="gradient-text">Transparent Captions</span>
+                    </h2>
+                    <p class="max-w-xl mx-auto text-sm sm:text-base text-neutral-400 leading-relaxed">
+                        From audio file to alpha channel overlay in under a minute. No manual timing, no complex
+                        masking.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <article class="feature-card rounded-xl p-7 relative scroll-anim">
+                        <div class="step-number" aria-hidden="true">01</div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center mb-5 border border-orange-500/20"
+                                aria-hidden="true">
+                                <iconify-icon icon="mdi:upload" width="24" class="text-orange-400"></iconify-icon>
+                            </div>
+                            <h3 class="font-oswald text-xl font-medium uppercase tracking-wide mb-3">Upload &amp;
+                                Auto-Transcribe</h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed mb-5">Drop your audio file. Gemini 1.5
+                                Flash AI transcribes it with precise word-level timings — no manual typing required.</p>
+                            <div class="space-y-2">
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">MP3, WAV, M4A, OGG supported</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">Word &amp; phrase-level timing</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">Multiple language support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-7 relative scroll-anim">
+                        <div class="step-number" aria-hidden="true">02</div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center mb-5 border border-orange-500/20"
+                                aria-hidden="true">
+                                <iconify-icon icon="mdi:palette-outline" width="24"
+                                    class="text-orange-400"></iconify-icon>
+                            </div>
+                            <h3 class="font-oswald text-xl font-medium uppercase tracking-wide mb-3">Style &amp; Add
+                                Effects</h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed mb-5">Choose from 100+ fonts, fine-tune
+                                every caption property, and apply professional motion effects with a single click.</p>
+                            <div class="space-y-2">
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">Font, size, color, stroke, shadow</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">8 pro motion text presets</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">Full undo/redo history</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-7 relative scroll-anim">
+                        <div class="step-number" aria-hidden="true">03</div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center mb-5 border border-orange-500/20"
+                                aria-hidden="true">
+                                <iconify-icon icon="mdi:download" width="24" class="text-orange-400"></iconify-icon>
+                            </div>
+                            <h3 class="font-oswald text-xl font-medium uppercase tracking-wide mb-3">Export &amp; Drop
+                                Into Editor</h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed mb-5">Export a transparent WebM caption
+                                overlay. Drag it straight into your video editing timeline — it just works.</p>
+                            <div class="space-y-2">
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">WebM with alpha channel</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">No green screen needed</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="check-icon"><iconify-icon icon="mdi:check" width="12"
+                                            class="text-orange-400" aria-hidden="true"></iconify-icon></div><span
+                                        class="text-xs text-neutral-400">Works in Premiere, AE, CapCut</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Effects Showcase -->
+        <section id="effects" class="relative z-10 px-4 sm:px-6 py-20 sm:py-28" aria-labelledby="effects-heading">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 scroll-anim">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] mb-5"
+                        aria-hidden="true">
+                        <iconify-icon icon="mdi:auto-fix" width="14" class="text-orange-400"></iconify-icon>
+                        <span class="text-[11px] font-medium text-neutral-400 tracking-wide uppercase">Motion Text
+                            Effects</span>
+                    </div>
+                    <h2 id="effects-heading"
+                        class="font-oswald text-3xl sm:text-4xl md:text-5xl font-medium tracking-[-0.03em] uppercase mb-4">
+                        Caption Animations<br><span class="gradient-text">That Demand Attention</span>
+                    </h2>
+                    <p class="max-w-xl mx-auto text-sm sm:text-base text-neutral-400 leading-relaxed">
+                        Eight professional text animation presets — from clean transitions to high-energy effects. Apply
+                        with one click.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-oswald text-lg font-bold text-white effect-overshoot relative z-10"
+                                style="text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">Overshoot</span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Overshoot</h3>
+                        <p class="text-xs text-neutral-500">Bouncy elastic entrance animation</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-oswald text-lg font-bold text-white relative z-10"
+                                style="text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000; animation: overshoot-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both infinite; animation-duration: 2s;">Pop</span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Pop</h3>
+                        <p class="text-xs text-neutral-500">Quick scale-up punch effect</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-oswald text-lg font-bold text-white relative z-10"
+                                style="text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000; animation: slideDownClip 1s cubic-bezier(0.16, 1, 0.3, 1) both infinite; animation-duration: 2.5s;">Slide
+                                Up</span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Slide Up</h3>
+                        <p class="text-xs text-neutral-500">Smooth upward reveal from below</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-oswald text-lg font-bold text-white relative z-10"
+                                style="text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000; animation: animationIn 1.2s ease-out both infinite; animation-duration: 2.5s;">Fade</span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Fade</h3>
+                        <p class="text-xs text-neutral-500">Clean fade-in with subtle blur</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-mono text-lg font-bold text-green-400 effect-decode relative z-10"
+                                style="text-shadow: 0 0 10px rgba(74,222,128,0.3);">D3c0d3</span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Decode</h3>
+                        <p class="text-xs text-neutral-500">Matrix-style flickering text reveal</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-mono text-lg font-bold text-white relative z-10"
+                                style="text-shadow: 0 0 10px rgba(255,255,255,0.2);"
+                                id="typewriterText">Typewriter</span>
+                            <span class="absolute right-[30%] bottom-[38%] w-[2px] h-5 bg-white"
+                                style="animation: typewriter-cursor 0.8s step-end infinite;" aria-hidden="true"></span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Typewriter</h3>
+                        <p class="text-xs text-neutral-500">Character-by-character typing effect</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-oswald text-lg font-bold text-yellow-400 effect-wiggle relative z-10"
+                                style="text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">Wiggle</span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Wiggle</h3>
+                        <p class="text-xs text-neutral-500">Playful jitter animation for fun content</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-5 scroll-anim">
+                        <div class="aspect-video bg-[#131416] rounded-lg mb-4 flex items-center justify-center overflow-hidden relative"
+                            style="border: 1px solid rgba(255,255,255,0.04);">
+                            <span class="font-oswald text-lg font-bold text-red-400 effect-turbulent relative z-10"
+                                style="text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">Turbulent</span>
+                        </div>
+                        <h3 class="font-oswald text-sm font-medium uppercase tracking-wide mb-1">Turbulent</h3>
+                        <p class="text-xs text-neutral-500">High-energy chaotic jitter effect</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alpha Export Section -->
+        <section id="export" class="relative z-10 px-4 sm:px-6 py-20 sm:py-28" aria-labelledby="export-heading">
+            <div class="absolute inset-0"
+                style="background: radial-gradient(600px 300px at 70% 50%, rgba(249,115,22,0.06), transparent 70%);"
+                aria-hidden="true"></div>
+            <div class="max-w-6xl mx-auto relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="scroll-anim">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] mb-5"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:alpha-a-box-outline" width="14"
+                                class="text-orange-400"></iconify-icon>
+                            <span class="text-[11px] font-medium text-neutral-400 tracking-wide uppercase">Alpha Channel
+                                Export</span>
+                        </div>
+                        <h2 id="export-heading"
+                            class="font-oswald text-3xl sm:text-4xl md:text-5xl font-medium tracking-[-0.03em] uppercase leading-[0.9] mb-6">
+                            No Green Screen.<br><span class="gradient-text">No Masking.</span><br>Just Drop It In.
+                        </h2>
+                        <p class="text-sm sm:text-base text-neutral-400 leading-relaxed mb-8">
+                            Vcaptiona records the canvas and exports a <strong class="text-white font-medium">WebM video
+                                with a built-in alpha channel</strong>. The background is truly transparent — not green,
+                            not black, not a chroma key approximation. Your caption overlays work everywhere.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    aria-hidden="true">
+                                    <iconify-icon icon="mdi:file-video-outline" width="16"
+                                        class="text-orange-400"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-white mb-0.5">Transparent WebM Format</div>
+                                    <div class="text-xs text-neutral-500">True alpha transparency, not simulated or
+                                        approximated</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    aria-hidden="true">
+                                    <iconify-icon icon="mdi:drag" width="16" class="text-orange-400"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-white mb-0.5">Drag &amp; Drop Import</div>
+                                    <div class="text-xs text-neutral-500">Place the exported file directly on your
+                                        editor timeline</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    aria-hidden="true">
+                                    <iconify-icon icon="mdi:clock-fast" width="16"
+                                        class="text-orange-400"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-white mb-0.5">Animations Baked In</div>
+                                    <div class="text-xs text-neutral-500">Motion effects are rendered into the export —
+                                        no plugins needed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-anim">
+                        <div class="border-beam-container rounded-2xl overflow-hidden"
+                            style="border: 1px solid rgba(255,255,255,0.08);" role="img"
+                            aria-label="Transparent WebM caption export preview showing alpha channel transparency">
+                            <div class="bg-[#090A0B] p-1">
+                                <div class="flex items-center gap-2 px-3 py-2">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-red-500/60" aria-hidden="true"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/60" aria-hidden="true"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-green-500/60" aria-hidden="true"></div>
+                                    <span
+                                        class="text-[9px] text-neutral-600 ml-2 font-mono">caption_overlay_alpha.webm</span>
+                                </div>
+                                <div
+                                    class="bg-[#131416] aspect-video rounded-b-xl relative overflow-hidden flex items-center justify-center">
+                                    <div class="absolute inset-0"
+                                        style="background-image: linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%), linear-gradient(-45deg, rgba(255,255,255,0.03) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.03) 75%), linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.03) 75%); background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0px;"
+                                        aria-hidden="true"></div>
+                                    <div class="float-badge relative z-10 text-center">
+                                        <span class="font-oswald text-xl sm:text-2xl font-bold text-white"
+                                            style="text-shadow: 0 4px 30px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1), 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">Your
+                                            caption here</span>
+                                    </div>
+                                    <div
+                                        class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-sm border border-white/10">
+                                        <div class="w-4 h-4 rounded"
+                                            style="background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%); background-size: 6px 6px; background-position: 0 0, 0 3px, 3px -3px, -3px 0px;"
+                                            aria-hidden="true"></div>
+                                        <span class="text-[10px] text-white/70 font-medium">ALPHA</span>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-sm border border-white/10">
+                                        <span class="text-[10px] text-orange-400 font-mono font-medium">.webm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-4 sm:gap-6 mt-6 flex-wrap">
+                            <div
+                                class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                                <iconify-icon icon="simple-icons:adobepremierepro" width="18" class="text-purple-400"
+                                    aria-hidden="true"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Premiere Pro</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                                <iconify-icon icon="simple-icons:adobeaftereffects" width="18" class="text-blue-400"
+                                    aria-hidden="true"></iconify-icon>
+                                <span class="text-xs text-neutral-400">After Effects</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                                <iconify-icon icon="simple-icons:capcut" width="18" class="text-cyan-400"
+                                    aria-hidden="true"></iconify-icon>
+                                <span class="text-xs text-neutral-400">CapCut</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="relative z-10 px-4 sm:px-6 py-20 sm:py-28" aria-labelledby="faq-heading">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12 scroll-anim">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] mb-5"
+                        aria-hidden="true">
+                        <iconify-icon icon="mdi:frequently-asked-questions" width="14"
+                            class="text-orange-400"></iconify-icon>
+                        <span class="text-[11px] font-medium text-neutral-400 tracking-wide uppercase">FAQ</span>
+                    </div>
+                    <h2 id="faq-heading"
+                        class="font-oswald text-3xl sm:text-4xl md:text-5xl font-medium tracking-[-0.03em] uppercase mb-4">
+                        Frequently Asked<br><span class="gradient-text">Questions</span>
+                    </h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="feature-card rounded-xl scroll-anim">
+                        <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <h3 class="text-sm sm:text-base font-medium text-white">What is an alpha caption overlay?
+                            </h3>
+                            <iconify-icon icon="mdi:chevron-down" width="20"
+                                class="text-neutral-500 faq-chevron flex-shrink-0" aria-hidden="true"></iconify-icon>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-sm text-neutral-400 leading-relaxed">An alpha caption overlay is a video file
+                                with a <strong class="text-white">transparent background</strong> (alpha channel)
+                                containing animated text captions. It can be placed directly on top of your video
+                                footage in editors like Premiere Pro, After Effects, or CapCut — without needing green
+                                screen removal, chroma keying, or complex masking.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-xl scroll-anim">
+                        <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <h3 class="text-sm sm:text-base font-medium text-white">Does Vcaptiona work with Adobe
+                                Premiere Pro and After Effects?</h3>
+                            <iconify-icon icon="mdi:chevron-down" width="20"
+                                class="text-neutral-500 faq-chevron flex-shrink-0" aria-hidden="true"></iconify-icon>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-sm text-neutral-400 leading-relaxed">Yes. Vcaptiona exports transparent WebM
+                                files with a built-in alpha channel that can be <strong class="text-white">imported
+                                    directly</strong> into Adobe Premiere Pro, After Effects, CapCut, DaVinci Resolve,
+                                and any editor that supports WebM with transparency. No plugins or extensions required.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-xl scroll-anim">
+                        <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <h3 class="text-sm sm:text-base font-medium text-white">How does the AI transcription work?
+                            </h3>
+                            <iconify-icon icon="mdi:chevron-down" width="20"
+                                class="text-neutral-500 faq-chevron flex-shrink-0" aria-hidden="true"></iconify-icon>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-sm text-neutral-400 leading-relaxed">Vcaptiona uses <strong
+                                    class="text-white">Google's Gemini 1.5 Flash</strong> model to automatically
+                                transcribe your uploaded audio files. It generates both word-level and phrase-level
+                                timestamps, significantly reducing the manual work of timing your captions compared to
+                                traditional SRT workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-xl scroll-anim">
+                        <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <h3 class="text-sm sm:text-base font-medium text-white">Do I need a green screen for
+                                transparent captions?</h3>
+                            <iconify-icon icon="mdi:chevron-down" width="20"
+                                class="text-neutral-500 faq-chevron flex-shrink-0" aria-hidden="true"></iconify-icon>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-sm text-neutral-400 leading-relaxed"><strong class="text-white">No.</strong>
+                                Vcaptiona renders captions on a transparent canvas and exports them as WebM files with a
+                                native alpha channel. There is no green screen, no chroma keying, and no masking
+                                required. The transparency is real and built into the file format.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-xl scroll-anim">
+                        <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <h3 class="text-sm sm:text-base font-medium text-white">Is Vcaptiona free to use?</h3>
+                            <iconify-icon icon="mdi:chevron-down" width="20"
+                                class="text-neutral-500 faq-chevron flex-shrink-0" aria-hidden="true"></iconify-icon>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-sm text-neutral-400 leading-relaxed">Vcaptiona is currently <strong
+                                    class="text-white">free during early access</strong>. No credit card is required to
+                                sign up. Join the waitlist to get immediate access when your spot opens.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-xl scroll-anim">
+                        <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <h3 class="text-sm sm:text-base font-medium text-white">What audio formats are supported?
+                            </h3>
+                            <iconify-icon icon="mdi:chevron-down" width="20"
+                                class="text-neutral-500 faq-chevron flex-shrink-0" aria-hidden="true"></iconify-icon>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-sm text-neutral-400 leading-relaxed">Vcaptiona supports <strong
+                                    class="text-white">MP3, WAV, M4A, and OGG</strong> audio formats. Simply upload your
+                                audio file and the AI handles the rest — transcription, timing, and caption generation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UX Features -->
+        <section class="relative z-10 px-4 sm:px-6 py-20 sm:py-28" aria-labelledby="ux-heading">
+            <div class="max-w-6xl mx-auto section-divider mb-20" aria-hidden="true"></div>
+            <div class="max-w-6xl mx-auto">
+                <h2 id="ux-heading" class="sr-only">Additional User Experience Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="flex items-center gap-3 mb-4" aria-hidden="true">
+                            <div class="flex items-center gap-1">
+                                <div
+                                    class="w-8 h-8 rounded-md bg-white/[0.04] flex items-center justify-center border border-white/[0.06]">
+                                    <iconify-icon icon="mdi:undo" width="16" class="text-neutral-400"></iconify-icon>
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-md bg-white/[0.04] flex items-center justify-center border border-white/[0.06]">
+                                    <iconify-icon icon="mdi:redo" width="16" class="text-neutral-400"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-oswald text-base font-medium uppercase tracking-wide mb-2">Full Undo/Redo System
+                        </h3>
+                        <p class="text-xs text-neutral-500 leading-relaxed">Experiment with confidence. Every caption
+                            design change is tracked — go back to any point in your editing history.</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="flex items-center gap-3 mb-4" aria-hidden="true">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-6 h-9 rounded-md bg-white/[0.04] border border-white/[0.06]"></div>
+                                <div class="w-8 h-8 rounded-md bg-white/[0.04] border border-white/[0.06]"></div>
+                                <div class="w-10 h-7 rounded-md bg-white/[0.04] border border-white/[0.06]"></div>
+                            </div>
+                        </div>
+                        <h3 class="font-oswald text-base font-medium uppercase tracking-wide mb-2">Responsive Design
+                        </h3>
+                        <p class="text-xs text-neutral-500 leading-relaxed">Built with Tailwind CSS. A polished, modern
+                            caption editor interface that works seamlessly across desktop, tablet, and mobile.</p>
+                    </article>
+
+                    <article class="feature-card rounded-xl p-6 scroll-anim">
+                        <div class="flex items-center gap-3 mb-4" aria-hidden="true">
+                            <div class="flex items-end gap-[2px] h-6">
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:40%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:70%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:100%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:60%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:90%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:30%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:80%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:50%"></div>
+                                <div class="w-[2px] bg-orange-500/40 rounded-full" style="height:65%"></div>
+                            </div>
+                        </div>
+                        <h3 class="font-oswald text-base font-medium uppercase tracking-wide mb-2">Waveform
+                            Visualization</h3>
+                        <p class="text-xs text-neutral-500 leading-relaxed">Integrated wavesurfer.js for visual audio
+                            editing. Click anywhere on the waveform to seek precisely through your audio.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Waitlist Section -->
+        <section id="waitlist" class="relative z-10 px-4 sm:px-6 py-20 sm:py-28" aria-labelledby="cta-heading">
+            <div class="absolute inset-0"
+                style="background: radial-gradient(800px 400px at 50% 50%, rgba(249,115,22,0.1), transparent 70%);"
+                aria-hidden="true"></div>
+            <div class="max-w-3xl mx-auto relative text-center scroll-anim">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/20 bg-orange-500/5 mb-6"
+                    aria-hidden="true">
+                    <iconify-icon icon="mdi:fire" width="14" class="text-orange-400"></iconify-icon>
+                    <span class="text-[11px] font-medium text-orange-400/80 tracking-wide uppercase">Free Early Access —
+                        Join Now</span>
+                </div>
+                <h2 id="cta-heading"
+                    class="font-oswald text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-[-0.03em] uppercase leading-[0.9] mb-6">
+                    Stop Building<br>Captions By Hand.
+                </h2>
+                <p class="text-base sm:text-lg text-neutral-400 leading-relaxed mb-10 max-w-lg mx-auto">
+                    Join thousands of video editors using Vcaptiona to create professional transparent caption overlays
+                    in seconds — not hours.
+                </p>
+
+                <form id="waitlistForm" class="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto mb-6"
+                    onsubmit="handleWaitlist(event)" novalidate>
+                    <label for="emailInput" class="sr-only">Email address</label>
+                    <input type="email" id="emailInput" name="email" placeholder="your@email.com" required
+                        autocomplete="email"
+                        class="w-full sm:flex-1 px-5 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.1] text-sm text-white placeholder:text-neutral-600 focus:outline-none focus:border-orange-500/40 focus:ring-1 focus:ring-orange-500/20 transition-colors">
+                    <button type="submit"
+                        class="btn-primary px-7 py-3.5 rounded-xl text-sm font-semibold text-white w-full sm:w-auto whitespace-nowrap">
+                        Join Waitlist Free
+                    </button>
+                </form>
+                <p class="text-[11px] text-neutral-600">Free during early access. No credit card required. Unsubscribe
+                    anytime.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 px-4 sm:px-6 pb-8 pt-16" role="contentinfo">
+        <div class="max-w-6xl mx-auto section-divider mb-12" aria-hidden="true"></div>
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <a href="/" class="flex items-center gap-2.5 mb-4" aria-label="Vcaptiona — Home">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center"
+                            aria-hidden="true">
+                            <iconify-icon icon="mdi:subtitles-outline" width="18" class="text-white"></iconify-icon>
+                        </div>
+                        <span class="font-oswald font-medium text-base tracking-wide">V<span
+                                class="text-orange-400">captiona</span></span>
+                    </a>
+                    <p class="text-xs text-neutral-600 leading-relaxed">AI-powered alpha caption overlay generator.
+                        Create transparent caption videos for any editor — fast, beautiful, professional.</p>
+                </div>
+                <nav aria-label="Product navigation">
+                    <h4 class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Product</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#features" class="text-xs text-neutral-500 hover:text-white transition-colors">AI
+                                Caption Generator</a></li>
+                        <li><a href="#effects"
+                                class="text-xs text-neutral-500 hover:text-white transition-colors">Motion Text
+                                Effects</a></li>
+                        <li><a href="#export" class="text-xs text-neutral-500 hover:text-white transition-colors">Alpha
+                                Channel Export</a></li>
+                        <li><a href="#how-it-works"
+                                class="text-xs text-neutral-500 hover:text-white transition-colors">How It Works</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav aria-label="Resources navigation">
+                    <h4 class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Resources</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#" class="text-xs text-neutral-500 hover:text-white transition-colors"
+                                onclick="showToast('📚 Documentation coming soon!'); return false;">Documentation</a>
+                        </li>
+                        <li><a href="#" class="text-xs text-neutral-500 hover:text-white transition-colors"
+                                onclick="showToast('🎬 Tutorials coming soon!'); return false;">Tutorials</a></li>
+                        <li><a href="#" class="text-xs text-neutral-500 hover:text-white transition-colors"
+                                onclick="showToast('🔧 API reference coming soon!'); return false;">API Reference</a>
+                        </li>
+                        <li><a href="#" class="text-xs text-neutral-500 hover:text-white transition-colors"
+                                onclick="showToast('📋 Changelog coming soon!'); return false;">Changelog</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <h4 class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Connect</h4>
+                    <div class="flex items-center gap-3">
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center hover:border-orange-500/30 hover:bg-orange-500/5 transition-all"
+                            aria-label="Follow Vcaptiona on X (Twitter)"
+                            onclick="showToast('🐦 Follow us on X!'); return false;">
+                            <iconify-icon icon="ri:twitter-x-fill" width="14" class="text-neutral-400"
+                                aria-hidden="true"></iconify-icon>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center hover:border-orange-500/30 hover:bg-orange-500/5 transition-all"
+                            aria-label="Star Vcaptiona on GitHub"
+                            onclick="showToast('🐙 Star us on GitHub!'); return false;">
+                            <iconify-icon icon="mdi:github" width="16" class="text-neutral-400"
+                                aria-hidden="true"></iconify-icon>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center hover:border-orange-500/30 hover:bg-orange-500/5 transition-all"
+                            aria-label="Join Vcaptiona Discord"
+                            onclick="showToast('📧 Join our Discord!'); return false;">
+                            <iconify-icon icon="ic:baseline-discord" width="16" class="text-neutral-400"
+                                aria-hidden="true"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider mb-6" aria-hidden="true"></div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                <span class="text-[11px] text-neutral-700">&copy; 2025 Vcaptiona.com. All rights reserved.</span>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="text-[11px] text-neutral-700 hover:text-neutral-400 transition-colors"
+                        onclick="return false;">Privacy Policy</a>
+                    <a href="#" class="text-[11px] text-neutral-700 hover:text-neutral-400 transition-colors"
+                        onclick="return false;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="alert" aria-live="polite">
+        <span id="toastMessage" class="text-sm text-white"></span>
+    </div>
+
+    <script>
+        // ========== Particle Canvas ==========
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouseX = -9999, mouseY = -9999;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = (Math.random() - 0.5) * 0.3;
+                this.opacity = Math.random() * 0.4 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                const dx = mouseX - this.x;
+                const dy = mouseY - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 180) {
+                    const force = (180 - dist) / 180;
+                    this.x -= dx * force * 0.01;
+                    this.y -= dy * force * 0.01;
+                    this.opacity = Math.min(0.8, this.opacity + 0.02);
+                } else {
+                    this.opacity += (0.2 - this.opacity) * 0.01;
+                }
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(249, 115, 22, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 120; i++) particles.push(new Particle());
+
+        function drawLines() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(249, 115, 22, ${0.06 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawLines();
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // ========== Scroll Animations ==========
+        const scrollElements = document.querySelectorAll('.scroll-anim');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('scroll-visible');
+                        entry.target.classList.remove('scroll-hidden');
+                    }, index * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+        scrollElements.forEach(el => { el.classList.add('scroll-hidden'); observer.observe(el); });
+
+        // ========== Hero Waveform ==========
+        const heroWaveform = document.getElementById('heroWaveform');
+        for (let i = 0; i < 120; i++) {
+            const bar = document.createElement('div');
+            bar.className = 'wave-bar';
+            bar.style.animationDelay = `${Math.random() * 1.5}s`;
+            bar.style.animationDuration = `${0.8 + Math.random() * 0.8}s`;
+            bar.style.height = `${10 + Math.random() * 90}%`;
+            heroWaveform.appendChild(bar);
+        }
+
+        // ========== Typewriter Effect ==========
+        const typewriterEl = document.getElementById('typewriterText');
+        const typewriterWords = 'Typewriter';
+        let twIndex = 0;
+        function typewriterLoop() {
+            twIndex = 0;
+            typewriterEl.textContent = '';
+            function typeChar() {
+                if (twIndex <= typewriterWords.length) {
+                    typewriterEl.textContent = typewriterWords.substring(0, twIndex);
+                    twIndex++;
+                    setTimeout(typeChar, 150 + Math.random() * 100);
+                } else {
+                    setTimeout(typewriterLoop, 1500);
+                }
+            }
+            typeChar();
+        }
+        typewriterLoop();
+
+        // ========== Mobile Menu ==========
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+        mobileMenuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('open', menuOpen);
+            mobileMenuBtn.setAttribute('aria-expanded', menuOpen);
+            mobileMenuBtn.innerHTML = menuOpen
+                ? '<iconify-icon icon="mdi:close" width="26" aria-hidden="true"></iconify-icon>'
+                : '<iconify-icon icon="mdi:menu" width="26" aria-hidden="true"></iconify-icon>';
+        });
+        mobileMenu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.remove('open');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<iconify-icon icon="mdi:menu" width="26" aria-hidden="true"></iconify-icon>';
+            });
+        });
+
+        // ========== Toast ==========
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => { toast.classList.remove('show'); }, 3500);
+        }
+
+        // ========== FAQ Toggle ==========
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const chevron = btn.querySelector('.faq-chevron');
+            const isOpen = answer.classList.contains('open');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer.open').forEach(a => {
+                a.classList.remove('open');
+                a.previousElementSibling.setAttribute('aria-expanded', 'false');
+                a.previousElementSibling.querySelector('.faq-chevron').classList.remove('open');
+            });
+
+            if (!isOpen) {
+                answer.classList.add('open');
+                chevron.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // ========== Waitlist Form ==========
+        function handleWaitlist(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value.trim();
+            if (!email) {
+                showToast('⚠️ Please enter your email address.');
+                document.getElementById('emailInput').focus();
+                return;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showToast('⚠️ Please enter a valid email address.');
+                document.getElementById('emailInput').focus();
+                return;
+            }
+            showToast('🎉 You\'re on the list! We\'ll notify you at ' + email);
+            document.getElementById('emailInput').value = '';
+        }
+
+        // ========== Smooth Scroll ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
