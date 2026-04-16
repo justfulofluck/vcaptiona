@@ -524,6 +524,8 @@
             border-radius: 4px;
             transition: all 200ms ease;
             cursor: grab;
+            white-space: nowrap;
+            min-width: fit-content;
         }
 
         .timeline-block:hover {
@@ -580,15 +582,16 @@
 
         .step-number {
             font-family: 'Oswald', sans-serif;
-            font-size: 120px;
+            font-size: clamp(60px, 15vw, 120px);
             font-weight: 700;
             line-height: 1;
             color: transparent;
             -webkit-text-stroke: 1px rgba(249, 115, 22, 0.2);
             position: absolute;
-            top: -20px;
+            top: -15px;
             left: -10px;
             user-select: none;
+            z-index: 0;
         }
 
         .section-divider {
@@ -751,18 +754,17 @@
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"
                 aria-hidden="true"></div>
 
-            <div class="relative z-10 max-w-6xl mx-auto text-center">
+            <div class="relative z-10 max-w-6xl mx-auto text-center px-4">
                 <!-- Badge -->
 
                 <!-- H1 — Primary Keyword Focus -->
                 <h1
-                    class="anim-in d2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-oswald font-medium leading-[0.85] tracking-[-0.04em] uppercase mb-6">
+                    class="anim-in d2 text-[2.8rem] sm:text-5xl md:text-6xl lg:text-7xl font-oswald font-medium leading-[0.9] sm:leading-[0.85] tracking-[-0.04em] uppercase mb-6">
                     <span class="hero-letter"><span style="animation-delay:400ms">A</span></span><span
                         class="hero-letter"><span style="animation-delay:500ms">l</span></span><span
                         class="hero-letter"><span style="animation-delay:600ms">p</span></span><span
                         class="hero-letter"><span style="animation-delay:700ms">h</span></span><span
-                        class="hero-letter"><span style="animation-delay:800ms">a</span></span><span
-                        class="hero-letter"><span style="animation-delay:850ms"> </span></span><span
+                        class="hero-letter"><span style="animation-delay:800ms">a</span></span>&nbsp;<span
                         class="hero-letter"><span style="animation-delay:900ms">C</span></span><span
                         class="hero-letter"><span style="animation-delay:1000ms">a</span></span><span
                         class="hero-letter"><span style="animation-delay:1100ms">p</span></span><span
@@ -774,8 +776,8 @@
                     <span class="gradient-text hero-letter"><span style="animation-delay:1800ms">M</span></span><span
                         class="gradient-text hero-letter"><span style="animation-delay:1900ms">a</span></span><span
                         class="gradient-text hero-letter"><span style="animation-delay:2000ms">d</span></span><span
-                        class="gradient-text hero-letter"><span style="animation-delay:2100ms">e</span></span><span
-                        class="gradient-text hero-letter"><span style="animation-delay:2150ms"> </span></span><span
+                        class="gradient-text hero-letter"><span
+                            style="animation-delay:2100ms">e</span></span>&nbsp;<span
                         class="gradient-text hero-letter"><span style="animation-delay:2200ms">S</span></span><span
                         class="gradient-text hero-letter"><span style="animation-delay:2300ms">i</span></span><span
                         class="gradient-text hero-letter"><span style="animation-delay:2400ms">m</span></span><span
@@ -783,6 +785,15 @@
                         class="gradient-text hero-letter"><span style="animation-delay:2600ms">l</span></span><span
                         class="gradient-text hero-letter"><span style="animation-delay:2700ms">e</span></span>
                 </h1>
+                <style>
+                    @media (max-width: 640px) {
+                        h1 {
+                            font-size: 2.3rem !important;
+                            line-height: 1.2 !important;
+                            letter-spacing: -0.01em !important;
+                        }
+                    }
+                </style>
 
                 <!-- Subtitle — Secondary Keywords -->
                 <p class="anim-in d4 max-w-2xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed mb-10">
@@ -808,7 +819,7 @@
                 </div>
 
                 <!-- Hero Visual: App Preview -->
-                <div class="anim-in d6 relative max-w-4xl mx-auto border-beam-container rounded-2xl overflow-hidden"
+                <div class="anim-in d6 relative max-w-4xl mx-auto border-beam-container rounded-2xl overflow-hidden shadow-2xl shadow-orange-500/5"
                     style="border: 1px solid rgba(255,255,255,0.08);" role="img"
                     aria-label="Vcaptiona app interface showing caption editor with timeline, waveform, and 1080p preview canvas">
                     <div class="flex items-center gap-2 px-4 py-3 bg-[#090A0B] border-b border-white/[0.06]">
@@ -818,87 +829,89 @@
                         <span class="text-[10px] text-neutral-500 ml-3 font-mono">Vcaptiona — Alpha Caption
                             Editor</span>
                     </div>
-                    <div class="bg-[#0B0C0E] p-4 sm:p-6">
-                        <div class="flex items-center gap-3 mb-4 flex-wrap">
-                            <div
-                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
-                                <iconify-icon icon="mdi:format-font" width="14" class="text-orange-400"
-                                    aria-hidden="true"></iconify-icon>
-                                <span>Oswald Bold</span>
+                    <div class="bg-[#0B0C0E] p-4 sm:p-6 overflow-x-auto">
+                        <div class="min-w-[600px] sm:min-w-0">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
+                                    <iconify-icon icon="mdi:format-font" width="14" class="text-orange-400"
+                                        aria-hidden="true"></iconify-icon>
+                                    <span>Oswald Bold</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
+                                    <span class="w-3 h-3 rounded-full bg-white border border-white/20"
+                                        aria-hidden="true"></span>
+                                    <span>#FFFFFF</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
+                                    <iconify-icon icon="mdi:format-size" width="14" class="text-orange-400"
+                                        aria-hidden="true"></iconify-icon>
+                                    <span>72px</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-orange-500/10 border border-orange-500/20 text-xs text-orange-400 ml-auto">
+                                    <iconify-icon icon="mdi:lightning-bolt" width="14"
+                                        aria-hidden="true"></iconify-icon>
+                                    <span>Overshoot</span>
+                                </div>
                             </div>
-                            <div
-                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
-                                <span class="w-3 h-3 rounded-full bg-white border border-white/20"
-                                    aria-hidden="true"></span>
-                                <span>#FFFFFF</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-xs text-neutral-400">
-                                <iconify-icon icon="mdi:format-size" width="14" class="text-orange-400"
-                                    aria-hidden="true"></iconify-icon>
-                                <span>72px</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-orange-500/10 border border-orange-500/20 text-xs text-orange-400 ml-auto">
-                                <iconify-icon icon="mdi:lightning-bolt" width="14" aria-hidden="true"></iconify-icon>
-                                <span>Overshoot</span>
-                            </div>
-                        </div>
-                        <div class="relative aspect-video bg-[#131416] rounded-lg overflow-hidden flex items-end justify-center pb-8 mb-4"
-                            style="border: 1px solid rgba(255,255,255,0.04);">
-                            <div class="absolute inset-0 opacity-[0.03]"
-                                style="background-image: linear-gradient(45deg, #fff 25%, transparent 25%), linear-gradient(-45deg, #fff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #fff 75%), linear-gradient(-45deg, transparent 75%, #fff 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;"
-                                aria-hidden="true"></div>
-                            <span class="effect-overshoot font-oswald text-2xl sm:text-4xl font-bold text-white"
-                                style="text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,0.9), 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">This
-                                is your caption</span>
-                            <div
-                                class="absolute top-3 right-3 px-2 py-0.5 rounded bg-white/[0.06] text-[10px] text-neutral-500 font-mono">
-                                1080p</div>
-                        </div>
-                        <div class="space-y-2">
-                            <div class="flex items-end gap-[2px] h-8 px-1 opacity-60" id="heroWaveform"
-                                aria-hidden="true"></div>
-                            <div class="relative bg-white/[0.02] rounded-md p-2 space-y-1.5"
+                            <div class="relative aspect-video bg-[#131416] rounded-lg overflow-hidden flex items-end justify-center pb-8 mb-4"
                                 style="border: 1px solid rgba(255,255,255,0.04);">
-                                <div class="flex items-center gap-[3px]">
-                                    <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
-                                        style="width: 28%;">This is your</div>
-                                    <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
-                                        style="width: 22%; opacity: 0.7;">caption</div>
-                                    <div class="flex-1"></div>
-                                </div>
-                                <div class="flex items-center gap-[3px]">
-                                    <div class="flex-1"></div>
-                                    <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
-                                        style="width: 35%; opacity: 0.5;">with alpha channel</div>
-                                </div>
-                                <div class="absolute top-0 bottom-0 left-[30%] w-[2px] bg-orange-500 z-10"
-                                    style="box-shadow: 0 0 8px rgba(249,115,22,0.5);" aria-hidden="true">
-                                    <div class="w-3 h-3 bg-orange-500 rounded-full -ml-[5px] -mt-1"
-                                        style="box-shadow: 0 0 10px rgba(249,115,22,0.6);"></div>
-                                </div>
-                                <div class="flex justify-between px-1 pt-1" aria-hidden="true">
-                                    <span class="text-[9px] text-neutral-600 font-mono">00:00</span>
-                                    <span class="text-[9px] text-neutral-600 font-mono">00:05</span>
-                                    <span class="text-[9px] text-neutral-600 font-mono">00:10</span>
-                                    <span class="text-[9px] text-neutral-600 font-mono">00:15</span>
+                                <div class="absolute inset-0 opacity-[0.03]"
+                                    style="background-image: linear-gradient(45deg, #fff 25%, transparent 25%), linear-gradient(-45deg, #fff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #fff 75%), linear-gradient(-45deg, transparent 75%, #fff 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;"
+                                    aria-hidden="true"></div>
+                                <span class="effect-overshoot font-oswald text-2xl sm:text-4xl font-bold text-white"
+                                    style="text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,0.9), 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">This
+                                    is your caption</span>
+                                <div
+                                    class="absolute top-3 right-3 px-2 py-0.5 rounded bg-white/[0.06] text-[10px] text-neutral-500 font-mono">
+                                    1080p</div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-end gap-[2px] h-8 px-1 opacity-60" id="heroWaveform"
+                                    aria-hidden="true"></div>
+                                <div class="relative bg-white/[0.02] rounded-md p-2 space-y-1.5"
+                                    style="border: 1px solid rgba(255,255,255,0.04);">
+                                    <div class="flex items-center gap-[3px]">
+                                        <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
+                                            style="width: 28%;">This is your</div>
+                                        <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
+                                            style="width: 22%; opacity: 0.7;">caption</div>
+                                        <div class="flex-1"></div>
+                                    </div>
+                                    <div class="flex items-center gap-[3px]">
+                                        <div class="flex-1"></div>
+                                        <div class="timeline-block px-3 py-1.5 text-[10px] text-orange-300 font-medium"
+                                            style="width: 35%; opacity: 0.5;">with alpha channel</div>
+                                    </div>
+                                    <div class="absolute top-0 bottom-0 left-[30%] w-[2px] bg-orange-500 z-10"
+                                        style="box-shadow: 0 0 8px rgba(249,115,22,0.5);" aria-hidden="true">
+                                        <div class="w-3 h-3 bg-orange-500 rounded-full -ml-[5px] -mt-1"
+                                            style="box-shadow: 0 0 10px rgba(249,115,22,0.6);"></div>
+                                    </div>
+                                    <div class="flex justify-between px-1 pt-1" aria-hidden="true">
+                                        <span class="text-[9px] text-neutral-600 font-mono">00:00</span>
+                                        <span class="text-[9px] text-neutral-600 font-mono">00:05</span>
+                                        <span class="text-[9px] text-neutral-600 font-mono">00:10</span>
+                                        <span class="text-[9px] text-neutral-600 font-mono">00:15</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Compatible Editors -->
-                <div class="anim-in d7 mt-12 flex flex-col items-center gap-3">
-                    <span class="text-[11px] text-neutral-600 uppercase tracking-[0.15em]">Compatible with</span>
-                    <div class="flex items-center gap-8 sm:gap-12 opacity-40">
-                        <span class="font-oswald text-lg tracking-wide">Premiere Pro</span>
-                        <span class="font-oswald text-lg tracking-wide">After Effects</span>
-                        <span class="font-oswald text-lg tracking-wide">CapCut</span>
+                    <!-- Compatible Editors -->
+                    <div class="anim-in d7 mt-12 flex flex-col items-center gap-3">
+                        <span class="text-[11px] text-neutral-600 uppercase tracking-[0.15em]">Compatible with</span>
+                        <div class="flex items-center gap-8 sm:gap-12 opacity-40">
+                            <span class="font-oswald text-lg tracking-wide">Premiere Pro</span>
+                            <span class="font-oswald text-lg tracking-wide">After Effects</span>
+                            <span class="font-oswald text-lg tracking-wide">CapCut</span>
+                        </div>
                     </div>
                 </div>
-            </div>
         </header>
 
         <!-- Stats Bar -->
@@ -1042,7 +1055,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <article class="feature-card rounded-xl p-7 relative scroll-anim">
                         <div class="step-number" aria-hidden="true">01</div>
                         <div class="relative z-10">
@@ -1495,7 +1508,7 @@
             <div class="max-w-6xl mx-auto section-divider mb-20" aria-hidden="true"></div>
             <div class="max-w-6xl mx-auto">
                 <h2 id="ux-heading" class="sr-only">Additional User Experience Features</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <article class="feature-card rounded-xl p-6 scroll-anim">
                         <div class="flex items-center gap-3 mb-4" aria-hidden="true">
                             <div class="flex items-center gap-1">
@@ -1595,7 +1608,7 @@
     <footer class="relative z-10 px-4 sm:px-6 pb-8 pt-16" role="contentinfo">
         <div class="max-w-6xl mx-auto section-divider mb-12" aria-hidden="true"></div>
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                 <div class="md:col-span-1">
                     <a href="/" class="flex items-center gap-2.5 mb-4" aria-label="Vcaptiona — Home">
                         <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center"
